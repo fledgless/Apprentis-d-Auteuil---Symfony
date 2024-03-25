@@ -47,7 +47,7 @@
                     <div class="menu-principal-container">
                         <ul class="menu-principal">
                             <li class="menu-principal-item">
-                                <a href="/views/presentation.view.php">Présentation</a>
+                                <a href="/presentation">Présentation</a>
                                 <!-- <ul classe="sub-menu">
                                     <li class="sub-menu_item">
                                         <a href="/mot-de-la-directrice">Mot de la directrice</a>
@@ -97,6 +97,9 @@
                                         <a href="/agent-de-maintenance-des-batiments">Agent de maintenances des bâtiments</a>
                                     </li>
                                 </ul> -->
+                            </li>
+                            <li class="menu-principal-item">
+                                <a href="/nos-dispositifs-d-insertion">Nos dispositifs d'insertion</a>
                             </li>
                             <li class="menu-principal-item">
                                 <a href="/un-projet-professionnel">Un projet professionnel</a>
@@ -177,7 +180,7 @@
         <div id="container">
             <?= $content ?>
         </div>
-
+        {% block title %}{% endblock %}
         <footer>
             <div class="container">
                 <div class="footer-rouge">
