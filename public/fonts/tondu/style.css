@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Tondu';
+    src: local('Tondu Regular'), local('Tondu-Regular'),
+        url('Tondu-Regular.woff2') format('woff2'),
+        url('Tondu-Regular.woff') format('woff'),
+        url('Tondu-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
