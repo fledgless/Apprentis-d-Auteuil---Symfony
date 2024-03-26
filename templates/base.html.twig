@@ -177,10 +177,8 @@
             </div>
         </header>
 
-        <div id="container">
-            <?= $content ?>
-        </div>
-        <h1>{% block title %}{% endblock %}</h1>
+        {% block body %}{% endblock %}
+
         <footer>
             <div class="container">
                 <div class="footer-rouge">
