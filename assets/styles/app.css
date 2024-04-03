@@ -194,7 +194,7 @@ header .blog-tagline {
 }
 
 .top-nav .menu li .sub-menu li.menu-principal-item>a {
-    background: url(../images/arrow-red.png) right 10px center/10% no-repeat;
+    /* background: url(../images/arrow-red.png) right 10px center/10% no-repeat; */
     padding-right: 25px
 }
 
