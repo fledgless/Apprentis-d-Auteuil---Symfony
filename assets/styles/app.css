@@ -301,7 +301,13 @@ footer .s-container {
     }
 }
 
-@media screen and (max-width: 907px) {
+@media screen and (max-width: 850px) {
+    footer .s-container {
+        padding: 15px 0;
+    }
+    footer .footer-blanc .s-container {
+        padding: 1.5rem 0;
+    }
     .footer-inner {
         align-items: center;
         justify-content: center;
@@ -343,15 +349,9 @@ footer .s-container {
         max-width: 100%;
         order: 4;
     }
-}
-
-@media screen and (max-width: 767px) {
-    footer .s-container {
-        padding: 15px 0;
-    }
-    footer .footer-blanc .s-container {
-        padding: 1.5rem 0;
-    }
+    .carousel-container {
+        flex-direction: column;
+    } 
 }
 
 @media screen and (max-width: 425px) {
@@ -370,4 +370,19 @@ h1 {
     text-transform: uppercase;
     font-size: 2em;
     margin: 0.67em 0;
+}
+
+.carousel-container {
+    background: #d90b34;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40px;
+}
+
+.carousel-gauche {
+
+}
+
+.carousel-droit {
+    
 }
