@@ -11,3 +11,18 @@ import './styles/app.css';
 
 // start the Stimulus application
 import './bootstrap';
+
+// toggle nav sur hamburger
+let nav = document.querySelector(".top-nav");
+let hamburger = document.querySelector("#hamburger");
+hamburger.addEventListener("click", () => {
+    nav.classList.toggle("open");
+})
+
+// toggle nav sur liens
+let liens = document.querySelectorAll(".menu-principal-item");
+liens.forEach((liens) => {
+    liens.addEventListener("click", () => {
+        nav.classList.remove("open");
+    })
+})

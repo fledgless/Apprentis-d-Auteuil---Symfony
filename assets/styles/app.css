@@ -210,6 +210,10 @@ ul {
     box-sizing: border-box;
 }
 
+.dropbtn {
+    display: none;
+}
+
 @media screen and (max-width: 1110px) {
     .top-nav {
         display: none;
@@ -233,6 +237,10 @@ ul {
         color: #222;
     }
 }
+
+
+
+/* templates -> parts -> footer */
 
 footer .s-container {
     padding: 35px;
@@ -380,7 +388,7 @@ footer .s-container {
 
 
 
-/* home -> carousel */
+/* templates -> home -> carousel */
 
 .carousel-container {
     background: #d90b34;
