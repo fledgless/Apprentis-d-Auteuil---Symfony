@@ -391,18 +391,18 @@ footer .s-container {
 
 /* templates -> home -> carousel */
 
-.carousel-container {
+main .carousel-container {
     background: #d90b34;
     display: flex;
     flex-direction: row;
     margin-bottom: 40px;
 }
 
-.carousel-gauche {
+main .carousel-container .carousel-gauche {
     max-width: 910px;
 }
 
-.carousel-droite-liste {
+main .carousel-container .carousel-droite .carousel-droite-liste {
     padding: 40px 45px;
     color: #fff;
     display: flex;
@@ -410,7 +410,7 @@ footer .s-container {
     justify-content: space-between;
 }
 
-.carousel-droite-liste-item {
+main .carousel-container .carousel-droite .carousel-droite-liste .carousel-droite-liste-item {
     display: flex;
     flex-direction: row;
     border-bottom: 2px solid #f5f5f5;
