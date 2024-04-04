@@ -164,12 +164,12 @@ header .blog-tagline {
 
 /* template -> nav */
 
-.top-nav {
+header .container .top-nav {
     background-color: #f5f5f5;
     z-index: 120;
 }
 
-.top-nav .menu-principal {
+header .container .top-nav .menu-principal {
     list-style: none;
     padding-left: 0;
     display: flex;
@@ -178,7 +178,7 @@ header .blog-tagline {
     margin: 0;
 }
 
-.top-nav .menu-principal a {
+header .container .top-nav .menu-principal a {
     text-transform: uppercase;
     padding: 20px 10px;
     text-decoration: none;
@@ -198,10 +198,10 @@ ul {
 
 
 @media screen and (max-width: 1110px) {
-    .top-nav {
+    header .container .top-nav {
         display: none;
     }
-    .top-nav.open {
+    header .container .top-nav.open {
         display: block;
         z-index: 119;
         top: 60px;
@@ -210,13 +210,13 @@ ul {
         width: 100%;
         background: #f5f5f5;
     }
-    .top-nav.open .menu-principal {
+    header .container .top-nav.open .menu-principal {
         margin: 0;
         flex-direction: column;
         list-style: none;
         padding-left: 0;
     }
-    .top-nav.open .menu-principal li {
+    header .container .top-nav.open .menu-principal li {
         border-bottom: 2px solid #fff;
     }
     .dropbtn {
@@ -413,11 +413,36 @@ main .carousel-container .carousel-droite .carousel-droite-liste {
 main .carousel-container .carousel-droite .carousel-droite-liste .carousel-droite-liste-item {
     display: flex;
     flex-direction: row;
+    border-top: 2px solid #f5f5f5;
     border-bottom: 2px solid #f5f5f5;
 }
 
+main .carousel-container .carousel-droite .carousel-droite-liste .carousel-droite-liste-item .carousel-droite-icones {
+    padding-top: 0;
+    padding-bottom: 20px;
+    padding-right: 30px;
+    align-self: center;
+}
+
+main .carousel-container .carousel-droite .carousel-droite-liste .carousel-droite-liste-item .carousel-droite-icones img {
+    max-width: 70px;
+    height: auto;
+}
+
+main .carousel-container .carousel-droite .carousel-droite-liste .carousel-droite-liste-item .carousel-droite-liens {
+    align-self: center;
+}
+
+main .carousel-container .carousel-droite .carousel-droite-liste .carousel-droite-liste-item .carousel-droite-liens h3 a {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+
 @media screen and (max-width: 850px) {
-    .carousel-container {
+    main .carousel-container {
         flex-direction: column;
     }
 }
