@@ -398,9 +398,41 @@ main .carousel-container {
     margin-bottom: 40px;
 }
 
+
+/* partie gauche du carousel */
+
 main .carousel-container .carousel-gauche {
     max-width: 910px;
+    display: block;
 }
+
+main .carousel-container .carousel-gauche ul {
+    list-style: none;
+    padding: 0;
+}
+
+main .carousel-container .carousel-gauche ul .slide img {
+    height: auto;
+    width: 100%;
+    display: block;
+}
+
+main .carousel-container .carousel-gauche .carousel-gauche-buttons {
+    position: absolute;
+    display: flex;
+    bottom: 111px;
+    right: 10%;
+}
+
+main .carousel-container .carousel-gauche .carousel-gauche-buttons .btn-carousel {
+    padding: 4px;
+    background-color: #d90b34;
+    color: #fff;
+    font-size: 0;
+    opacity: 1;
+}
+
+/* partie droite du carousel  */
 
 main .carousel-container .carousel-droite .carousel-droite-liste {
     padding: 40px 45px;
@@ -413,7 +445,6 @@ main .carousel-container .carousel-droite .carousel-droite-liste {
 main .carousel-container .carousel-droite .carousel-droite-liste .carousel-droite-liste-item {
     display: flex;
     flex-direction: row;
-    border-top: 2px solid #f5f5f5;
     border-bottom: 2px solid #f5f5f5;
 }
 
@@ -444,6 +475,9 @@ main .carousel-container .carousel-droite .carousel-droite-liste .carousel-droit
 @media screen and (max-width: 850px) {
     main .carousel-container {
         flex-direction: column;
+    }
+    main .carousel-container .carousel-gauche {
+        max-width: 100%;
     }
 }
 
