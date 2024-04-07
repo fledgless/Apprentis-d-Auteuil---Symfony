@@ -406,15 +406,46 @@ main .carousel-container .carousel-gauche {
     display: block;
 }
 
-main .carousel-container .carousel-gauche ul {
-    list-style: none;
+main .carousel-container .carousel-gauche .carousel-gauche-contenu {
     padding: 0;
 }
 
-main .carousel-container .carousel-gauche ul .slide img {
+main .carousel-container .carousel-gauche .carousel-gauche-contenu .carousel-gauche-element .carousel-gauche-element-image img {
     height: auto;
     width: 100%;
     display: block;
+}
+
+main .carousel-container .carousel-gauche .carousel-gauche-contenu .carousel-gauche-element .carousel-gauche-element-contenu {
+    position: absolute;
+    bottom: 0;
+    background-color: #fff;
+    left: 10%;
+    right: 10%;
+    height: 130px;
+    display: flex;
+}
+
+main .carousel-container .carousel-gauche .carousel-gauche-contenu .carousel-gauche-element .carousel-gauche-element-contenu .accueil-carousel-header h2 {
+    position: absolute;
+    margin: -18px 0 0;
+    padding: 3px 10px;
+    color: #fff;
+    text-transform: uppercase;
+    background: #d90b34;
+    font-size: 18px;
+}
+
+main .carousel-container .carousel-gauche .carousel-gauche-contenu .carousel-gauche-element .carousel-gauche-element-contenu .carousel-gauche-element-preview {
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    flex-direction: row;
+}
+
+main .carousel-container .carousel-gauche .carousel-gauche-contenu .carousel-gauche-element .carousel-gauche-element-contenu .carousel-gauche-element-preview h3 {
+    align-self: center;
 }
 
 main .carousel-container .carousel-gauche .carousel-gauche-buttons {
@@ -430,6 +461,11 @@ main .carousel-container .carousel-gauche .carousel-gauche-buttons .btn-carousel
     color: #fff;
     font-size: 0;
     opacity: 1;
+    cursor: pointer;
+}
+
+main .carousel-container .carousel-gauche .carousel-gauche-buttons #prev {
+    margin-right: 10px
 }
 
 /* partie droite du carousel  */
@@ -478,6 +514,9 @@ main .carousel-container .carousel-droite .carousel-droite-liste .carousel-droit
     }
     main .carousel-container .carousel-gauche {
         max-width: 100%;
+    }
+    main .carousel-container .carousel-gauche .carousel-gauche-buttons {
+        right: 0;
     }
 }
 
