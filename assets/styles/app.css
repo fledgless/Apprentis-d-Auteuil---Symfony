@@ -402,12 +402,22 @@ main .carousel-container {
 /* partie gauche du carousel */
 
 main .carousel-container .carousel-gauche {
-    max-width: 910px;
+    max-width: 60%;
     display: block;
 }
 
 main .carousel-container .carousel-gauche .carousel-gauche-contenu {
     padding: 0;
+}
+
+main .carousel-container .carousel-gauche .carousel-gauche-contenu .carousel-gauche-element {
+    position: absolute;
+    opacity: 0;
+}
+
+main .carousel-container .carousel-gauche .carousel-gauche-contenu .carousel-gauche-element.active {
+    position: relative;
+    opacity: 1;
 }
 
 main .carousel-container .carousel-gauche .carousel-gauche-contenu .carousel-gauche-element .carousel-gauche-element-image img {
@@ -442,10 +452,16 @@ main .carousel-container .carousel-gauche .carousel-gauche-contenu .carousel-gau
     padding-right: 10%;
     display: flex;
     flex-direction: row;
+    text-decoration: none;
 }
 
 main .carousel-container .carousel-gauche .carousel-gauche-contenu .carousel-gauche-element .carousel-gauche-element-contenu .carousel-gauche-element-preview h3 {
     align-self: center;
+}
+
+main .carousel-container .carousel-gauche .carousel-gauche-contenu .carousel-gauche-element .carousel-gauche-element-contenu .carousel-gauche-element-preview h3 a {
+    text-decoration: none;
+    color: #222;
 }
 
 main .carousel-container .carousel-gauche .carousel-gauche-buttons {
@@ -511,9 +527,16 @@ main .carousel-container .carousel-droite .carousel-droite-liste .carousel-droit
 @media screen and (max-width: 850px) {
     main .carousel-container {
         flex-direction: column;
+        margin-bottom: 30px;
     }
     main .carousel-container .carousel-gauche {
         max-width: 100%;
+    }
+    main .carousel-container .carousel-gauche .carousel-gauche-contenu .carousel-gauche-element .carousel-gauche-element-contenu {
+        position: inherit;
+        margin-top: -5px;
+        right: 0;
+        left: 0;
     }
     main .carousel-container .carousel-gauche .carousel-gauche-buttons {
         right: 0;

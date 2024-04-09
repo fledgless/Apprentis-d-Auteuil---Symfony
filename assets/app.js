@@ -26,3 +26,16 @@ liens.forEach((liens) => {
         nav.classList.remove("open");
     })
 })
+
+// toogle active sur carousel
+
+const buttons = document.querySelectorAll(".btn-carousel");
+const slides = document.querySelectorAll(".carousel-gauche-element");
+
+buttons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        const calcNextSlide = e.target.id === "next" ? 1 : -1;
+        const slideActive = document.querySelector(".active");
+        
+    })
+})
