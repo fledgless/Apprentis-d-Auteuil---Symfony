@@ -1,3 +1,5 @@
+/* general css */
+
 * {
     box-sizing: border-box;
 }
@@ -10,6 +12,28 @@ body {
     font-size: 16px;
     font-family: "Roboto Condensed", sans-serif;
 }
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-family: Tondu, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+h2 {
+    line-height: 1.5;
+}
+
+img {
+    border-style: none;
+}
+
+
 
 /* template -> header */
 
@@ -24,7 +48,7 @@ body {
 .s-container {
     padding: 35px 35px 60px;
     width: 1180px;
-    padding: 35px;
+    /* padding: 35px; */
     overflow: hidden;
     margin: auto;
 }
@@ -98,13 +122,10 @@ header .blog-tagline {
     cursor: pointer;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1110px) {
     .container {
         width: 100%;
     }
-}
-
-@media screen and (max-width: 1110px) {
     .banner .container {
         display: flex;
         flex-direction: row;
@@ -151,14 +172,16 @@ header .blog-tagline {
     }
 }
 
+
+
 /* template -> nav */
 
-.top-nav {
+header .container .top-nav {
     background-color: #f5f5f5;
     z-index: 120;
 }
 
-.top-nav .menu-principal {
+header .container .top-nav .menu-principal {
     list-style: none;
     padding-left: 0;
     display: flex;
@@ -167,7 +190,7 @@ header .blog-tagline {
     margin: 0;
 }
 
-.top-nav .menu-principal a {
+header .container .top-nav .menu-principal a {
     text-transform: uppercase;
     padding: 20px 10px;
     text-decoration: none;
@@ -177,43 +200,60 @@ header .blog-tagline {
     font-weight: bold;
 }
 
-.top-nav .menu-principal li .sub-menu {
-    min-width: 180px;
-    display: none;
-    position: absolute;
-    background: #fff;
-    list-style: none;
-    padding-left: 0;
-    z-index: 120;
-    border-top: 2px solid #d90b34;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
-}
-
-.top-nav .menu li .sub-menu li.menu-principal-item {
-    position: relative
-}
-
-.top-nav .menu li .sub-menu li.menu-principal-item>a {
-    background: url(../images/arrow-red.png) right 10px center/10% no-repeat;
-    padding-right: 25px
-}
-
-.top-nav .menu-principal li .sub-menu li.menu-principal-item .sub-menu {
-    display: none;
-    left: 100%;
-    top: 0;
-    width: 100%
-}
-
 ul {
     box-sizing: border-box;
 }
 
+.dropbtn {
+    display: none;
+}
+
+
 @media screen and (max-width: 1110px) {
-    .top-nav {
+    header .container .top-nav {
         display: none;
     }
+    header .container .top-nav.open {
+        display: block;
+        z-index: 119;
+        top: 60px;
+        position: absolute;
+        right: 0;
+        width: 100%;
+        background: #f5f5f5;
+    }
+    header .container .top-nav.open .menu-principal {
+        margin: 0;
+        flex-direction: column;
+        list-style: none;
+        padding-left: 0;
+    }
+    header .container .top-nav.open .menu-principal li {
+        border-bottom: 2px solid #fff;
+    }
+    .dropbtn {
+        background: #f5f5f5;
+        display: block;
+        height: 60px;
+        width: 60px;
+        position: fixed;
+        right: 0;
+        z-index:120;
+        text-decoration: none;
+    }
+    .dropbtn i {
+        display: flex;
+        justify-content: center;
+        margin-top: 14px;
+        font-size: 28px;
+        text-decoration: none;
+        color: #222;
+    }
 }
+
+
+
+/* templates -> parts -> footer */
 
 footer .s-container {
     padding: 35px;
@@ -301,7 +341,13 @@ footer .s-container {
     }
 }
 
-@media screen and (max-width: 907px) {
+@media screen and (max-width: 850px) {
+    footer .s-container {
+        padding: 15px 0;
+    }
+    footer .footer-blanc .s-container {
+        padding: 1.5rem 0;
+    }
     .footer-inner {
         align-items: center;
         justify-content: center;
@@ -342,16 +388,7 @@ footer .s-container {
         margin-top: 0.5rem;
         max-width: 100%;
         order: 4;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    footer .s-container {
-        padding: 15px 0;
-    }
-    footer .footer-blanc .s-container {
-        padding: 1.5rem 0;
-    }
+    } 
 }
 
 @media screen and (max-width: 425px) {
@@ -362,12 +399,251 @@ footer .s-container {
     }
 }
 
-/* general css */
 
-h1 {
+
+/* templates -> home -> carousel */
+
+main .carousel-container {
+    background: #d90b34;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40px;
+}
+
+
+/* partie gauche du carousel */
+
+main .carousel-container .carousel-gauche {
+    max-width: 60%;
+    display: block;
+}
+
+main .carousel-container .carousel-gauche .carousel-gauche-contenu {
+    padding: 0;
+}
+
+main .carousel-container .carousel-gauche .carousel-gauche-contenu .carousel-gauche-element {
+    position: absolute;
+    opacity: 0;
+}
+
+main .carousel-container .carousel-gauche .carousel-gauche-contenu .carousel-gauche-element.active {
+    position: relative;
+    opacity: 1;
+}
+
+main .carousel-container .carousel-gauche .carousel-gauche-contenu .carousel-gauche-element .carousel-gauche-element-image img {
+    height: auto;
+    width: 100%;
+    display: block;
+}
+
+main .carousel-container .carousel-gauche .carousel-gauche-contenu .carousel-gauche-element .carousel-gauche-element-contenu {
+    position: absolute;
+    bottom: 0;
+    background-color: #fff;
+    left: 10%;
+    right: 10%;
+    height: 130px;
+    display: flex;
+}
+
+main .carousel-container .carousel-gauche .carousel-gauche-contenu .carousel-gauche-element .carousel-gauche-element-contenu .accueil-carousel-header h2 {
+    position: absolute;
+    margin: -18px 0 0;
+    padding: 3px 10px;
+    color: #fff;
+    text-transform: uppercase;
+    background: #d90b34;
+    font-size: 18px;
+}
+
+main .carousel-container .carousel-gauche .carousel-gauche-contenu .carousel-gauche-element .carousel-gauche-element-contenu .carousel-gauche-element-preview {
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+}
+
+main .carousel-container .carousel-gauche .carousel-gauche-contenu .carousel-gauche-element .carousel-gauche-element-contenu .carousel-gauche-element-preview h3 {
+    align-self: center;
+}
+
+main .carousel-container .carousel-gauche .carousel-gauche-contenu .carousel-gauche-element .carousel-gauche-element-contenu .carousel-gauche-element-preview h3 a {
+    text-decoration: none;
+    color: #222;
+}
+
+main .carousel-container .carousel-gauche .carousel-gauche-buttons {
+    position: absolute;
+    display: flex;
+    bottom: 111px;
+    right: 10%;
+}
+
+main .carousel-container .carousel-gauche .carousel-gauche-buttons .btn-carousel {
+    padding: 4px;
+    background-color: #d90b34;
+    color: #fff;
+    font-size: 0;
+    opacity: 1;
+    cursor: pointer;
+}
+
+main .carousel-container .carousel-gauche .carousel-gauche-buttons #prev {
+    margin-right: 10px
+}
+
+/* partie droite du carousel  */
+
+main .carousel-container .carousel-droite .carousel-droite-liste {
+    padding: 40px 45px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main .carousel-container .carousel-droite .carousel-droite-liste .carousel-droite-liste-item {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid #f5f5f5;
+}
+
+main .carousel-container .carousel-droite .carousel-droite-liste .carousel-droite-liste-item .carousel-droite-icones {
+    padding-top: 0;
+    padding-bottom: 20px;
+    padding-right: 30px;
+    align-self: center;
+}
+
+main .carousel-container .carousel-droite .carousel-droite-liste .carousel-droite-liste-item .carousel-droite-icones img {
+    max-width: 70px;
+    height: auto;
+}
+
+main .carousel-container .carousel-droite .carousel-droite-liste .carousel-droite-liste-item .carousel-droite-liens {
+    align-self: center;
+}
+
+main .carousel-container .carousel-droite .carousel-droite-liste .carousel-droite-liste-item .carousel-droite-liens h3 a {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 850px) {
+    main .carousel-container {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    main .carousel-container .carousel-gauche {
+        max-width: 100%;
+    }
+    main .carousel-container .carousel-gauche .carousel-gauche-contenu .carousel-gauche-element .carousel-gauche-element-contenu {
+        position: inherit;
+        margin-top: -5px;
+        right: 0;
+        left: 0;
+    }
+    main .carousel-container .carousel-gauche .carousel-gauche-buttons {
+        right: 0;
+    }
+}
+
+
+/* templates -> home */
+
+main .home-contenu {
+    min-width: 75%;
+    font-size: 15px;
+    line-height: 1.3rem;
+}
+
+main .home-contenu .bandeau .s-container {
+    overflow: visible;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main .home-contenu .bandeau.rouge {
+    background-color: #d90b34;
+}
+
+main .home-contenu .bandeau.blanc {
+    background-color: #fff;
+}
+
+main .home-contenu .bandeau .s-container h2 {
+    width: 100%;
     font-family: Tondu, sans-serif;
     font-weight: 500;
     text-transform: uppercase;
-    font-size: 2em;
-    margin: 0.67em 0;
+    font-size: 40px;
+}
+
+main .home-contenu .bandeau.rouge .s-container h2 {
+    color: #fff;
+    position: relative;
+    display: block;
+}
+
+main .home-contenu .bandeau.blanc .s-container h2 {
+    color: #222;
+    position: relative;
+    display: block;
+}
+
+main .home-contenu .bandeau .s-container .bandeau-element {
+    margin-top: 10px;
+}
+
+main .home-contenu .bandeau .s-container .bandeau-element figure {
+    margin: 0;
+    position: relative;
+}
+
+main .home-contenu .bandeau .s-container .bandeau-element figure img {
+    display: block;
+}
+
+main .home-contenu .bandeau .s-container .bandeau-element figure figcaption {
+    position: absolute;
+    top: 0;
+    font-size: 18px;
+    width: 100%;
+    height: 100%;
+}
+
+main .home-contenu .bandeau .s-container .bandeau-element figure figcaption a {
+    color: #fff;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+main .home-contenu .bandeau .s-container .bandeau-element figure figcaption a h3 {
+    align-self: center;
+    text-align: center;
+}
+
+@media screen and (max-width: 850px) {
+    main .home-contenu .bandeau .s-container {
+        justify-content: center;
+    }
+    main .home-contenu .bandeau .s-container h2 {
+        font-size: 30px;
+    }
+    main .home-contenu .bandeau .s-container .bandeau-element figure img {
+        max-width: 100%;
+        height: auto;
+    }
 }
