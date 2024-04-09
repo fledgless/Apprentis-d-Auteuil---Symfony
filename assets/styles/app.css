@@ -26,11 +26,7 @@ h1 {
 }
 
 h2 {
-    width: 100%;
-    font-family: Tondu, sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
-    font-size: 40px;
+    line-height: 1.5;
 }
 
 img {
@@ -568,11 +564,7 @@ main .home-contenu {
     line-height: 1.3rem;
 }
 
-main .home-contenu .bandeau-rouge {
-    background-color: #d90b34;
-}
-
-main .home-contenu .bandeau-rouge .s-container {
+main .home-contenu .bandeau .s-container {
     overflow: visible;
     display: flex;
     flex-direction: row;
@@ -580,26 +572,48 @@ main .home-contenu .bandeau-rouge .s-container {
     justify-content: space-between;
 }
 
-main .home-contenu .bandeau-rouge .s-container h2 {
+main .home-contenu .bandeau.rouge {
+    background-color: #d90b34;
+}
+
+main .home-contenu .bandeau.blanc {
+    background-color: #fff;
+}
+
+main .home-contenu .bandeau .s-container h2 {
+    width: 100%;
+    font-family: Tondu, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+main .home-contenu .bandeau.rouge .s-container h2 {
     color: #fff;
     position: relative;
     display: block;
 }
 
-main .home-contenu .bandeau-rouge .s-container .bandeau-rouge-element {
+main .home-contenu .bandeau.blanc .s-container h2 {
+    color: #222;
+    position: relative;
+    display: block;
+}
+
+main .home-contenu .bandeau .s-container .bandeau-element {
     margin-top: 10px;
 }
 
-main .home-contenu .bandeau-rouge .s-container .bandeau-rouge-element figure {
+main .home-contenu .bandeau .s-container .bandeau-element figure {
     margin: 0;
     position: relative;
 }
 
-main .home-contenu .bandeau-rouge .s-container .bandeau-rouge-element figure img {
+main .home-contenu .bandeau .s-container .bandeau-element figure img {
     display: block;
 }
 
-main .home-contenu .bandeau-rouge .s-container .bandeau-rouge-element figure figcaption {
+main .home-contenu .bandeau .s-container .bandeau-element figure figcaption {
     position: absolute;
     top: 0;
     font-size: 18px;
@@ -607,7 +621,7 @@ main .home-contenu .bandeau-rouge .s-container .bandeau-rouge-element figure fig
     height: 100%;
 }
 
-main .home-contenu .bandeau-rouge .s-container .bandeau-rouge-element figure figcaption a {
+main .home-contenu .bandeau .s-container .bandeau-element figure figcaption a {
     color: #fff;
     text-transform: uppercase;
     display: flex;
@@ -616,7 +630,20 @@ main .home-contenu .bandeau-rouge .s-container .bandeau-rouge-element figure fig
     height: 100%;
 }
 
-main .home-contenu .bandeau-rouge .s-container .bandeau-rouge-element figure figcaption a h3 {
+main .home-contenu .bandeau .s-container .bandeau-element figure figcaption a h3 {
     align-self: center;
     text-align: center;
+}
+
+@media screen and (max-width: 850px) {
+    main .home-contenu .bandeau .s-container {
+        justify-content: center;
+    }
+    main .home-contenu .bandeau .s-container h2 {
+        font-size: 30px;
+    }
+    main .home-contenu .bandeau .s-container .bandeau-element figure img {
+        max-width: 100%;
+        height: auto;
+    }
 }
