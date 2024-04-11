@@ -416,21 +416,30 @@ main .carousel-container {
 main .carousel-container .carousel-gauche {
     max-width: 60%;
     display: block;
+    position: relative;
+    overflow: hidden;
 }
 
 main .carousel-container .carousel-gauche .carousel-gauche-contenu {
+    height: calc(100vh - 2rem);
+    width: 100%;
+    display: flex;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    margin: 0;
     padding: 0;
 }
 
 main .carousel-container .carousel-gauche .carousel-gauche-contenu .carousel-gauche-element {
-    position: absolute;
-    opacity: 0;
+    width: 100%;
+    height: 100%;
+    flex: 1 0 100%;
 }
 
-main .carousel-container .carousel-gauche .carousel-gauche-contenu .carousel-gauche-element.active {
+/* main .carousel-container .carousel-gauche .carousel-gauche-contenu .carousel-gauche-element.active {
     position: relative;
     opacity: 1;
-}
+} */
 
 main .carousel-container .carousel-gauche .carousel-gauche-contenu .carousel-gauche-element .carousel-gauche-element-image img {
     height: auto;
@@ -439,7 +448,7 @@ main .carousel-container .carousel-gauche .carousel-gauche-contenu .carousel-gau
 }
 
 main .carousel-container .carousel-gauche .carousel-gauche-contenu .carousel-gauche-element .carousel-gauche-element-contenu {
-    position: absolute;
+    position: inherit;
     bottom: 0;
     background-color: #fff;
     left: 10%;
