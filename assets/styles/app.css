@@ -421,10 +421,8 @@ main .carousel-container .carousel-gauche {
 }
 
 main .carousel-container .carousel-gauche .carousel-gauche-contenu {
-    height: calc(100vh - 2rem);
-    width: 100%;
+    overflow: overlay;
     display: flex;
-    overflow: scroll;
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
