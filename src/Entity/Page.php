@@ -26,6 +26,9 @@ class Page
     #[ORM\OneToOne(cascade: ['persist', 'remove'])]
     private ?Miniature $miniature = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $category = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -75,6 +78,18 @@ class Page
     public function setMiniature(?Miniature $miniature): static
     {
         $this->miniature = $miniature;
+
+        return $this;
+    }
+
+    public function getCategory(): ?string
+    {
+        return $this->category;
+    }
+
+    public function setCategory(string $category): static
+    {
+        $this->category = $category;
 
         return $this;
     }

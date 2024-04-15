@@ -35,6 +35,9 @@ class Article
     #[ORM\ManyToOne]
     private ?Media $featuredImage = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $category = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -120,6 +123,18 @@ class Article
     public function setFeaturedImage(?Media $featuredImage): static
     {
         $this->featuredImage = $featuredImage;
+
+        return $this;
+    }
+
+    public function getCategory(): ?string
+    {
+        return $this->category;
+    }
+
+    public function setCategory(string $category): static
+    {
+        $this->category = $category;
 
         return $this;
     }
