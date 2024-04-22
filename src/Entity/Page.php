@@ -29,6 +29,9 @@ class Page
     #[ORM\Column(length: 255)]
     private ?string $category = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $featuredText = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -90,6 +93,18 @@ class Page
     public function setCategory(string $category): static
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    public function getFeaturedText(): ?string
+    {
+        return $this->featuredText;
+    }
+
+    public function setFeaturedText(?string $featuredText): static
+    {
+        $this->featuredText = $featuredText;
 
         return $this;
     }
