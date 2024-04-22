@@ -3,5 +3,7 @@
 {% block title %}Actualités{% endblock %}
 
 {% block body %}
-{# <h1>Actualités</h1> #}
+    <div id="article-list">
+        {% include "article/list.html.twig" with { articles } %}
+    </div>
 {% endblock %}
