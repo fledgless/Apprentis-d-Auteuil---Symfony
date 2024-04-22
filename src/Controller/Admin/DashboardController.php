@@ -7,6 +7,7 @@ use App\Entity\Media;
 use App\Entity\Page;
 use App\Entity\Miniature;
 use App\Entity\User;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -50,8 +51,13 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linkToDashboard('Dashboard', 'fa fa-home'),
             
             MenuItem::section('Articles'),
-            MenuItem::linkToCrud('Articles', 'fas fa-list', Article::class),
-            MenuItem::linkToCrud('Médias', 'fas fa-list', Media::class),
+            MenuItem::subMenu('Articles', 'fas fa-newspaper')->setSubItems([
+                MenuItem::linkToCrud('Tous les articles', 'fas fa-list', Article::class),
+                MenuItem::linkToCrud('Ajouter', 'fas fa-plus', Article::class)->setAction(Crud::PAGE_NEW),
+            ]),
+            MenuItem::subMenu('Médias', 'fas fa-newspaper')->setSubItems([
+                MenuItem::linkToCrud('Tous les médias', 'fas fa-list', Media::class),
+            ]),
 
             MenuItem::section('Pages'),
             MenuItem::linkToCrud('Pages', 'fas fa-list', Page::class),
