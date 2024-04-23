@@ -1,15 +1,8 @@
 {% extends 'base.html.twig' %}
 
-{# {% set article_show = path('article_show', {'slug': article.slug }) %} #}
-
-{# {% block title %}{{ article.title }}{% endblock %} #}
+{% block title %}{{ article.title }}{% endblock %}
 
 {% block body %}
-{# <article>
-    {% if article.featuredImage %}
-        <a class="item-article-featuredimg" href="{{ article_show }}">
-            <img src="/uploads/{{ article.featuredImage.filename }}" alt="{{ article.featuredImage.altText }}" loading="lazy" width="350" height="205">
-        </a>
-    {% endif %}
-</article> #}
+   
+{{ article.content }}
 {% endblock %}

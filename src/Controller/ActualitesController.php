@@ -10,10 +10,10 @@ use Symfony\Component\Routing\Attribute\Route;
 class ActualitesController extends AbstractController
 {
     #[Route('/actualites', name: 'app_actualites')]
-    public function index(ArticleRepository $articleRepository): Response
+    public function index(ArticleRepository $articleRepo): Response
     {
         return $this->render('actualites/index.html.twig', [
-            'articles' => $articleRepository->findAll()
+            'articles' => $articleRepo->findAll()
         ]);
     }
 }
