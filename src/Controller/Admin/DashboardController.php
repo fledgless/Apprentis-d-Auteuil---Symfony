@@ -53,18 +53,25 @@ class DashboardController extends AbstractDashboardController
             MenuItem::section('Articles'),
             MenuItem::subMenu('Articles', 'fas fa-newspaper')->setSubItems([
                 MenuItem::linkToCrud('Tous les articles', 'fas fa-list', Article::class),
-                MenuItem::linkToCrud('Ajouter', 'fas fa-plus', Article::class)->setAction(Crud::PAGE_NEW),
+                MenuItem::linkToCrud('Ajout article', 'fas fa-plus', Article::class)->setAction(Crud::PAGE_NEW),
             ]),
-            MenuItem::subMenu('Médias', 'fas fa-newspaper')->setSubItems([
+            MenuItem::subMenu('Médias', 'fas fa-image')->setSubItems([
                 MenuItem::linkToCrud('Tous les médias', 'fas fa-list', Media::class),
+                MenuItem::linkToCrud('Ajout média', 'fas fa-plus', Media::class)->setAction(Crud::PAGE_NEW),
             ]),
 
             MenuItem::section('Pages'),
-            MenuItem::linkToCrud('Pages', 'fas fa-list', Page::class),
-            MenuItem::linkToCrud('Miniatures', 'fas fa-list', Miniature::class),
+            MenuItem::subMenu('Pages', 'fas fa-pen-nib')->setSubItems([
+                MenuItem::linkToCrud('Toutes les pages', 'fas fa-list', Page::class),
+                MenuItem::linkToCrud('Ajout page', 'fas fa-plus', Page::class)->setAction(Crud::PAGE_NEW),
+            ]),
+            MenuItem::subMenu('Miniatures', 'fas fa-image')->setSubItems([
+                MenuItem::linkToCrud('Toutes les miniatures', 'fas fa-list', Miniature::class),
+                MenuItem::linkToCrud('Ajouter', 'fas fa-plus', Miniature::class)->setAction(Crud::PAGE_NEW),
+            ]),
 
             MenuItem::section('Users'),
-            MenuItem::linkToCrud('Users', 'fas fa-list', User::class),
+            MenuItem::linkToCrud('Users', 'fas fa-user', User::class),
         ];
     }
 }

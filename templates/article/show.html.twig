@@ -1,16 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ArticleController!{% endblock %}
+{# {% set article_show = path('article_show', {'slug': article.slug }) %} #}
+
+{# {% block title %}{{ article.title }}{% endblock %} #}
 
 {% block body %}
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/Projets/projets_symfony/cfp_sainte_barbe/src/Controller/ArticleController.php</code></li>
-        <li>Your template at <code>C:/Projets/projets_symfony/cfp_sainte_barbe/templates/article/index.html.twig</code></li>
-    </ul>
-</div>
+{# <article>
+    {% if article.featuredImage %}
+        <a class="item-article-featuredimg" href="{{ article_show }}">
+            <img src="/uploads/{{ article.featuredImage.filename }}" alt="{{ article.featuredImage.altText }}" loading="lazy" width="350" height="205">
+        </a>
+    {% endif %}
+</article> #}
 {% endblock %}
