@@ -658,6 +658,45 @@ main .home-contenu .bandeau .s-container .bandeau-element figure figcaption a h3
 
 
 
+
+/* login */
+
+.login {
+    position: relative;
+}
+
+.login label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.login input {
+    display: block;
+    height: 40px;
+    width: 100%;
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.login .btn-login {
+    margin-top: 30px;
+    width: 100%;
+    background-color: #d90b34;
+    padding: 15px 0;
+    font-size: 16px;
+    color: #ddd;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+
+
 /* actualités -> articles show */
 
 .presentation-page {
