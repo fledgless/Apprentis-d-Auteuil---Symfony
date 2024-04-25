@@ -13,7 +13,7 @@ class ActualitesController extends AbstractController
     public function index(ArticleRepository $articleRepo): Response
     {
         return $this->render('actualites/index.html.twig', [
-            'articles' => $articleRepo->findAll()
+            'articles' => $articleRepo->findAll(),
         ]);
     }
 }
