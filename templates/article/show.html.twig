@@ -3,6 +3,7 @@
 {% block title %}{{ article.title }}{% endblock %}
 
 {% block body %}
+<div class="article-category">{{ article.category }}</div>
 
-{{ article.content }}
+<div class="article-content">{{ article.content|raw }}</div>
 {% endblock %}

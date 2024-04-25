@@ -11,12 +11,12 @@ use Symfony\Component\Routing\Attribute\Route;
 class ArticleController extends AbstractController
 {
     #[Route('/article/{slug}', name: 'article_show', methods: ['GET'])]
-    public function show(string $slug): Response
+    public function show(string $slug, ArticleRepository $articleRepo): Response
     {
-    
-        
+        $article = $articleRepo->findOneBy(['slug' => $slug]);
+        // dd($slug, $article);
         return $this->render('article/show.html.twig', [
-            'article' => $article,
+            'article' => $article
         ]);
     }
 }
