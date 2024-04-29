@@ -2,14 +2,18 @@
 
 <div class="item-page">
     {% if page.miniature %}
-        <a class="item-page-miniature" href="{{ page_show }}">
-            <img src="/uploads/{{ page.miniature.filename }}" alt="{{ page.miniature.altText }}" loading="lazy" width="350" height="205">
-        </a>
+        <figure class="item-page-lien">
+            <a class="item-page-miniature" href="{{ page_show }}">
+                <img src="/uploads/{{ page.miniature.filename }}" alt="{{ page.miniature.altText }}" loading="lazy" width="350" height="196">
+            </a>
+            <figcaption>
+                <a href="{{ page_show }}">
+                    <h3>{{ page.title }}</h3>
+                </a>
+            </figcaption>
+        </figure>
     {% endif %}
     <div class="item-page-informations">    
-        <h3 class="item-page-title">
-            <a href="{{ page_show }}">{{ page.title }}</a>
-        </h3>
         <div class="item-page-description">
             <p>{{ page.featuredText ?: page.content|striptags|slice(0, 130) ~ '...' }}</p>
         </div>
