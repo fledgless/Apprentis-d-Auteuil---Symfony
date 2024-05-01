@@ -1,4 +1,4 @@
-{% set page_show = path('page_show', { slug: page.slug }) %}
+{% set page_show = path('page_show', { category: page.category|slug|lower, slug: page.slug }) %}
 
 <div class="item-page">
     {% if page.miniature %}

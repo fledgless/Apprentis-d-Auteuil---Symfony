@@ -817,7 +817,7 @@ main .home-contenu .bandeau .s-container .bandeau-element figure figcaption a h3
     text-transform: uppercase;
 }
 
-article .article-titre {
+article .article-titre, .page .page-titre {
     font-family: Tondu, sans-serif;
     font-weight: 500;
     text-transform: uppercase;
@@ -825,7 +825,7 @@ article .article-titre {
     margin: 0.67em 0;
 }
 
-article img {
+article img, .page img {
     display: flex;
     border-style: none;
     max-width: 100%;
@@ -834,7 +834,7 @@ article img {
     padding: 15px;
 }
 
-article h1 {
+article h1, .page h1 {
     text-transform: uppercase;
     line-height: 1.5;
     color: #222;
@@ -842,7 +842,7 @@ article h1 {
     font-family: RobotoCondensed-Bold, sans-serif;
 }
 
-.article-content a {
+.article-content a, .page-content a {
     color: #d90b34;
 }
 
