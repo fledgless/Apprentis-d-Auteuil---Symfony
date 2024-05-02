@@ -14,9 +14,14 @@ class ArticleController extends AbstractController
     public function show(string $slug, ArticleRepository $articleRepo): Response
     {
         $article = $articleRepo->findOneBy(['slug' => $slug]);
+        if (!$article) {
+            return $this->redirectToRoute('app_actualites');
+        } else {
+            return $this->render('article/show.html.twig', [
+                'article' => $article
+            ]);
+        }
         // dd($slug, $article);
-        return $this->render('article/show.html.twig', [
-            'article' => $article
-        ]);
+        
     }
 }

@@ -13,8 +13,12 @@ class PageController extends AbstractController
     public function show(string $slug, PageRepository $pageRepo): Response
     {
         $page = $pageRepo->findOneBy(['slug' => $slug]);
-        return $this->render('page/show.html.twig', [
-            'page' => $page
-        ]);
+        if (!$page) {
+            return $this->redirectToRoute('app_home');
+        } else {
+            return $this->render('page/show.html.twig', [
+                'page' => $page
+            ]);
+        }
     }
 }
