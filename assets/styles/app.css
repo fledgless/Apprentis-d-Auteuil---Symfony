@@ -196,6 +196,10 @@ header .container .top-nav .menu-principal a {
     font-weight: bold;
 }
 
+header .container .top-nav .menu-principal a:hover {
+    color: #d90b34;
+}
+
 ul {
     box-sizing: border-box;
 }
@@ -395,6 +399,27 @@ footer .s-container {
     }
 }
 
+
+/* breadcrumbs */
+
+.breadcrumbs {
+    width: 1110px;
+    padding-top: 25px;
+    margin: auto;
+}
+
+.breadcrumbs span {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.breadcrumbs span a {
+    color: #222;
+}
+
+.breadcrumbs .current-page {
+    font-weight: normal;
+}
 
 
 /* templates -> home -> carousel */
@@ -787,7 +812,7 @@ main .home-contenu .bandeau .s-container .bandeau-element figure figcaption a h3
 }
 
 .item-page figure figcaption a h3 {
-    font-family: RobotoCondensed, sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     font-size: 24px;
     text-transform: uppercase;
     color: #fff;
@@ -839,7 +864,8 @@ article h1, .page h1 {
     line-height: 1.5;
     color: #222;
     font-size: 24px;
-    font-family: RobotoCondensed-Bold, sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: bold;
 }
 
 .article-content a, .page-content a {
@@ -848,7 +874,7 @@ article h1, .page h1 {
 
 .presentation-page {
     margin: 35px 0 60px;
-    font-family: RobotoCondensed, sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     color: #d90b34;
     font-size: 18px;
     line-height: 1.8rem;

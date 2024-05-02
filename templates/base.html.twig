@@ -25,8 +25,17 @@
             {% include '/parts/header.html.twig' %}
         {% endblock %}
         <main>
+            <div class="breadcrumbs">
+                <span>
+                    <a href="/">Accueil</a>
+                </span>
+                » 
+                <span class="current-page">
+                    {% block title %}{% endblock title %}
+                </span>
+            </div>
             <div class="s-container">
-                <h1>{% block title %}{% endblock title %}</h1>
+                <h1>{{ block('title') }}</h1>
                 {% block body %}{% endblock %}
             </div>
         </main>

@@ -1,6 +1,19 @@
 {% extends 'base-home-article.html.twig' %}
 
 {% block body %}
+    <div class="breadcrumbs">
+        <span>
+            <a href="/">Accueil</a>
+        </span>
+         » 
+        <span>
+            <a href="/actualites">Actualités</a>
+        </span>
+         » 
+        <span class="current-page">
+            {{ article.title }}
+        </span>
+    </div>
     <div class="s-container">
         <article>
             <div class="article-category">{{ article.category }}</div>
