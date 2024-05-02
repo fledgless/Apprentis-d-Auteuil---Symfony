@@ -394,7 +394,7 @@ footer .s-container {
 @media screen and (max-width: 425px) {
     .s-container {
         width: 90%;
-        padding: 15px;
+        padding: 15px 0;
         margin: auto;
     }
 }
@@ -420,6 +420,23 @@ footer .s-container {
 .breadcrumbs .current-page {
     font-weight: normal;
 }
+
+@media screen and (max-width: 1280px) {
+    .breadcrumbs {
+        padding-left: 35px;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .breadcrumbs {
+        padding-left: 5px;
+    }
+}
+
+
+
+
 
 
 /* templates -> home -> carousel */
@@ -801,6 +818,12 @@ main .home-contenu .bandeau .s-container .bandeau-element figure figcaption a h3
     position: relative;
 }
 
+.item-page figure a img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
 .item-page figure figcaption {
     width: 100%;
     display: block;
@@ -819,16 +842,20 @@ main .home-contenu .bandeau .s-container .bandeau-element figure figcaption a h3
     text-align: center;
 }
 
-@media screen and (max-width: 768px) {
-    
+@media screen and (min-width: 768px) {
+    .item-page {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
     .item-page {
         flex-basis: 33.33333%;
         max-width: 33.33333%;
     }
 }
+
 
 
 
