@@ -917,7 +917,7 @@ textarea {
     overflow: auto;
 }
 
-.formulaire-contact form input, .formulaire-preinscription form input {
+.formulaire-contact form input[type="text"], .formulaire-preinscription form input[type="text"] {
     margin: 0 0 25px;
     border: 1px solid #4a4a4a;
     width: 345px;
@@ -943,7 +943,7 @@ textarea {
 }
 
 @media screen and (max-width: 767px) {
-    .formulaire-contact form textarea, .formulaire-contact form input, .formulaire-preinscription form textarea, .formulaire-preinscription form input {
+    .formulaire-contact form textarea, .formulaire-contact form input[type="text"], .formulaire-preinscription form textarea, .formulaire-preinscription form input[type="text"] {
         width: 100%;
     }
 }

@@ -4,7 +4,140 @@
 
 {% block body %}
     <div class="formulaire-preinscription">
+        <p>Merci de remplir ce formulaire.</p>
         <form action="" id="form-preinscription" onsubmit="return validate();"> 
+            <div class="input_field"> 
+                <h3>Votre PROFIL*</h3>
+                <div class="checkbox">
+                    <input type="checkbox" id="profil1">
+                    <label for="profil1">Parents</label>
+                </div>
+                 <div class="checkbox">
+                    <input type="checkbox" id="profil2">
+                    <label for="profil2">Elève / Apprenti</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="profil3">
+                    <label for="profil3">Chef d'établissement / Enseignant</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="profil4">
+                    <label for="profil4">Conseiller d'orientation / Educateur</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="profil5">
+                    <label for="profil5">Autre</label>
+                </div>
+            </div>
+            <div class="input_field"> 
+                <h3>La CLASSE / NIVEAU ACTUEL du jeune concerné*</h3>
+                <p>Niveau actuel</p>
+                <div class="checkbox">
+                    <input type="checkbox" id="niveau1">
+                    <label for="niveau1">5ème</label>
+                </div>
+                 <div class="checkbox">
+                    <input type="checkbox" id="niveau2">
+                    <label for="niveau2">4ème</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="niveau3">
+                    <label for="niveau3">3ème</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="niveau4">
+                    <label for="niveau4">CAP</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="niveau5">
+                    <label for="niveau5">Bac Pro</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="niveau6">
+                    <label for="niveau6">Autre</label>
+                </div>
+                <p>Filière actuelle</p>
+                <div class="checkbox">
+                    <input type="checkbox" id="filiere1">
+                    <label for="filiere1">Générale</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="filiere2">
+                    <label for="filiere2">Découverte des métiers (4ème)</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="filiere3">
+                    <label for="filiere3">Prépa Pro (3ème)</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="filiere4">
+                    <label for="filiere4">Autre</label>
+                </div>
+            </div> 
+            <div class="input_field"> 
+                <h3>FORMATION DEMANDEE*</h3>
+                <p>Niveau</p>
+                <div class="checkbox">
+                    <input type="checkbox" id="niveauformation1">
+                    <label for="niveauformation1">CAP</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="niveauformation2">
+                    <label for="niveauformation2">Bac Pro</label>
+                </div>
+                <p>Filière</p>
+                <div class="checkbox">
+                    <input type="checkbox" id="filiereforma1">
+                    <label for="filiereforma1">Couvreur</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="filiereforma2">
+                    <label for="filiereforma2">Zingueur</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="filiereforma3">
+                    <label for="filiere3">Etancheur</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="filiereforma4">
+                    <label for="filiereforma4">Menuisier</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="filiereforma5">
+                    <label for="filiere5">Charpentier</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="filiereforma6">
+                    <label for="filiereforma6">Poseur-installeur</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="filiereforma7">
+                    <label for="filiereforma7">Plaquiste-plâtrier</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="filiereforma8">
+                    <label for="filiereforma8">Maçon</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="filiereforma9">
+                    <label for="filiereforma9">Coffreur bancheur</label>
+                </div>
+            </div>
+            <div class="input_field"> 
+                <h3>BESOIN D'UN LOGEMENT SUR PLACE</h3>
+                <div class="checkbox">
+                    <input type="checkbox" id="oui">
+                    <label for="oui">Oui</label>
+                </div>
+                 <div class="checkbox">
+                    <input type="checkbox" id="non">
+                    <label for="non">Non</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="nesaitpas">
+                    <label for="nesaitpas">Ne sait pas</label>
+                </div>
+            </div>
             <div class="input_field"> 
                 <p>NOM*</p>
                 <input type="text" id="nom"> 
