@@ -917,7 +917,7 @@ textarea {
     overflow: auto;
 }
 
-.formulaire-contact form input {
+.formulaire-contact form input, .formulaire-preinscription form input {
     margin: 0 0 25px;
     border: 1px solid #4a4a4a;
     width: 345px;
@@ -925,13 +925,13 @@ textarea {
     background: #fff;
 }
 
-.formulaire-contact form textarea {
+.formulaire-contact form textarea, .formulaire-preinscription form textarea {
     border: 1px solid #4a4a4a;
     width: 725px;
     height: 175px;
 }
 
-.formulaire-contact form button {
+.formulaire-contact form button, .formulaire-preinscription form button {
     background: #d90b34;
     color: #fff;
     font-family: "Roboto Condensed", sans-serif;
@@ -943,7 +943,7 @@ textarea {
 }
 
 @media screen and (max-width: 767px) {
-    .formulaire-contact form textarea, .formulaire-contact form input {
+    .formulaire-contact form textarea, .formulaire-contact form input, .formulaire-preinscription form textarea, .formulaire-preinscription form input {
         width: 100%;
     }
 }

@@ -3,5 +3,45 @@
 {% block title %}Se préinscrire{% endblock %}
 
 {% block body %}
-
+    <div class="formulaire-preinscription">
+        <form action="" id="form-preinscription" onsubmit="return validate();"> 
+            <div class="input_field"> 
+                <p>NOM*</p>
+                <input type="text" id="nom"> 
+            </div> 
+            <div class="input_field"> 
+                <p>PRENOM*</p>
+                <input type="text" id="prenom"> 
+            </div> 
+            <div class="input_field"> 
+                <p>ADRESSE</p>
+                <input type="text" id="adresse"> 
+            </div> 
+            <div class="input_field"> 
+                <p>CODE POSTAL</p>
+                <input type="text" id="code-postal"> 
+            </div> 
+            <div class="input_field"> 
+                <p>VILLE*</p>
+                <input type="text" id="ville"> 
+            </div>
+            <div class="input_field"> 
+                <p>PAYS</p>
+                <input type="text" id="pays"> 
+            </div> 
+            <div class="input_field"> 
+                <p>TELEPHONE*</p>
+                <input type="text" id="telephone"> 
+            </div>  
+            <div class="input_field">
+                <p>EMAIL*</p> 
+                <input type="text" id="adresse-mail"> 
+            </div>
+            <div class="input_field"> 
+                <p>PRECISIONS SUR LA DEMANDE</p>
+                <textarea id="precisions"></textarea> 
+            </div> 
+            <button>Envoyer</button>
+        </form>
+    </div>
 {% endblock %}
