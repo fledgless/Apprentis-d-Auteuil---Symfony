@@ -27,6 +27,7 @@ h1 {
 
 h2 {
     line-height: 1.5;
+    text-transform: uppercase;
 }
 
 
@@ -905,4 +906,44 @@ article h1, .page h1 {
     color: #d90b34;
     font-size: 18px;
     line-height: 1.8rem;
+}
+
+
+
+
+/* formulaire de contact */
+
+textarea {
+    overflow: auto;
+}
+
+.formulaire-contact form input {
+    margin: 0 0 25px;
+    border: 1px solid #4a4a4a;
+    width: 345px;
+    height: 45px;
+    background: #fff;
+}
+
+.formulaire-contact form textarea {
+    border: 1px solid #4a4a4a;
+    width: 725px;
+    height: 175px;
+}
+
+.formulaire-contact form button {
+    background: #d90b34;
+    color: #fff;
+    font-family: "Roboto Condensed", sans-serif;
+    margin: 45px 0;
+    border: none;
+    cursor: pointer;
+    padding: 16px 15px;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px) {
+    .formulaire-contact form textarea, .formulaire-contact form input {
+        width: 100%;
+    }
 }

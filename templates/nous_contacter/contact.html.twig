@@ -3,5 +3,37 @@
 {% block title %}Contact{% endblock %}
 
 {% block body %}
-
+    <div class="nous-trouver">
+        <h2>Où sommes-nous ?</h2>
+        <p>2 rue Paul Gauguin – 62750 Loos-en-Gohelle</p>
+        <p>Tel. : 03 21 14 77 50</p>
+        <p>
+            <a href="https://hautsdefrance.apprentis-auteuil.org/files/2015/07/Venir-a-Loos-en-Gohelle.png" target="_blank">
+                <img src="{{ asset('images/pour-y-aller.png') }}" alt="" height="92px">
+            </a>
+        </p>
+    </div>
+    <div class="formulaire-contact">
+        <h2>Addressez-nous ce formulaire</h2>
+        <form action="" id="form-contact" onsubmit="return validate();"> 
+            <div class="input_field"> 
+                <p>Votre nom (obligatoire)</p>
+                <input type="text" id="name"> 
+            </div> 
+            <div class="input_field">
+                <p>Votre email (obligatoire)</p> 
+                <input type="text" id="email"> 
+            </div>
+            <div class="input_field"> 
+                <p>Sujet</p>
+                <input type="text" id="subject"> 
+            </div>  
+            <div class="input_field"> 
+                <p>Votre message</p>
+                <textarea id="message"></textarea> 
+            </div> 
+            <button>Envoyer</button>
+        </form>
+    </div>
+    
 {% endblock %}
