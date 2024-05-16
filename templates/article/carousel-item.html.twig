@@ -1,0 +1,19 @@
+{% set article_show = path('article_show', { 'slug': article.slug }) %}
+
+<div class="carousel-gauche-element" id="carousel-element-1">
+    <div class="carousel-gauche-element-image" id="carousel-element-1-image">
+        <a href="{{ article_show }}">
+            <img width="910" height="512" src="/uploads/{{ article.featuredImage.filename }}" alt="{{ article.featuredImage.altText }}">
+        </a>
+    </div>
+    <div class="carousel-gauche-element-contenu" id="carousel-element-1-contenu">
+        <div class="accueil-carousel-header" id="carousel-element-1-header">
+            <h2>à la une</h2>
+        </div>
+        <div class="carousel-gauche-element-preview" id="carousel-element-1-preview">
+            <h3 class="carousel-gauche-element-h3">
+                <a href="{{ article_show }}">{{ article.title }}</a>
+            </h3>
+        </div>
+    </div>
+</div>

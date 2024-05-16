@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\PageRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -9,10 +10,10 @@ use Symfony\Component\Routing\Attribute\Route;
 class PresentationController extends AbstractController
 {
     #[Route('/presentation', name: 'app_presentation')]
-    public function index(): Response
+    public function index(PageRepository $pageRepo): Response
     {
         return $this->render('presentation/index.html.twig', [
-            'controller_name' => 'PresentationController',
+            'pages' => $pageRepo->findBy(['category' => 'Présentation']),
         ]);
     }
 }

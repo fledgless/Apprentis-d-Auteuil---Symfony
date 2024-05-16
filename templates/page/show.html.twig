@@ -1,0 +1,26 @@
+{% extends 'base-home-article.html.twig' %}
+
+{% block body %}
+    <div class="breadcrumbs">
+        {% if page.category != "Accueil"%}
+            <span>
+                <a href="/">Accueil</a>
+            </span>
+             » 
+        {% endif %}
+        <span>
+            <a href="/{{ page.category|slug|lower }}">{{ page.category }}</a>
+        </span>
+         » 
+        <span class="current-page">
+            {{ page.title }}
+        </span>
+    </div>
+    <div class="s-container">
+        <div class="page">
+            <h1 class="page-titre">{% block title %}{{ page.title }}{% endblock %}</h1>
+            <div class="page-content">{{ page.content|raw }}</div>
+        </div>
+    </div>
+{% endblock %}
+

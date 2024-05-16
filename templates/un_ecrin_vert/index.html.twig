@@ -3,5 +3,7 @@
 {% block title %}Un écrin vert{% endblock %}
 
 {% block body %}
-
+    <div id="page-list">
+        {% include "page/list.html.twig" with { pages } %}
+    </div>
 {% endblock %}

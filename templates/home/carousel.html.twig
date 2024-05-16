@@ -1,51 +1,7 @@
     <div class="carousel-container">
         <div class="carousel-gauche">
             <div class="carousel-gauche-contenu">
-                <div class="carousel-gauche-element active" id="carousel-element-1">
-                    <div class="carousel-gauche-element-image" id="carousel-element-1-image">
-                        <img src="images/carousel/exemple3.jpg" alt="">
-                    </div>
-                    <div class="carousel-gauche-element-contenu" id="carousel-element-1-contenu">
-                        <div class="accueil-carousel-header" id="carousel-element-1-header">
-                            <h2>à la une</h2>
-                        </div>
-                        <div class="carousel-gauche-element-preview" id="carousel-element-1-preview">
-                            <h3 class="carousel-gauche-element-h3">
-                                <a href="#">En vidéo, retour sur les 10 ans du CFP Sainte-Barbe !</a>
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-gauche-element" id="carousel-element-2">
-                    <div class="carousel-gauche-element-image" id="carousel-element-2-image">
-                        <img src="images/carousel/exemple2.jpg" alt="">
-                    </div>
-                    <div class="carousel-gauche-element-contenu" id="carousel-element-2-contenu">
-                        <div class="accueil-carousel-header" id="carousel-element-2-header">
-                            <h2>à la une</h2>
-                        </div>
-                        <div class="carousel-gauche-element-preview" id="carousel-element-2-preview">
-                            <h3 class="carousel-gauche-element-h3">
-                                <a href="#">Visite du musée de la bataille de Fromelles pour les apprentis</a>
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-gauche-element" id="carousel-element-3">
-                    <div class="carousel-gauche-element-image" id="carousel-element-3-image">
-                        <img src="images/carousel/exemple1.jpg" alt="">
-                    </div>
-                    <div class="carousel-gauche-element-contenu" id="carousel-element-3-contenu">
-                        <div class="accueil-carousel-header" id="carousel-element-3-header">
-                            <h2>à la une</h2>
-                        </div>
-                        <div class="carousel-gauche-element-preview" id="carousel-element-3-preview">
-                            <h3 class="carousel-gauche-element-h3">
-                                <a href="#">Nouveau chantier école : devanture de notre collège de Fournes-en-Weppes</a>
-                            </h3>
-                        </div>
-                    </div>
-                </div>
+                {% include "article/carousel.html.twig" with { articles } %}
             </div>
             <div class="carousel-gauche-buttons">
                 <button class="btn-carousel" id="prev">
@@ -64,7 +20,7 @@
                     </div>
                     <div class="carousel-droite-liens">
                         <h3>
-                            <a href="#">Se préinscrire</a>
+                            <a href="/nous-contacter/se-preinscrire">Se préinscrire</a>
                         </h3>
                     </div>
                 </div>
@@ -74,7 +30,7 @@
                     </div>
                     <div class="carousel-droite-liens">
                         <h3>
-                            <a href="#">Réussir au CFP Ste Barbe</a>
+                            <a href="/presentation/reussir-au-cfp-sainte-barbe">Réussir au CFP Ste Barbe</a>
                         </h3>
                     </div>
                 </div>
@@ -84,17 +40,17 @@
                     </div>
                     <div class="carousel-droite-liens">
                         <h3>
-                            <a href="#">Formations pour vos salariés</a>
+                            <a href="/espace-entreprise/formation-sur-mesure-pour-vos-salaries">Formations pour vos salariés</a>
                         </h3>
                     </div>
                 </div>
-                <div class="carousel-droite-liste-item">
+                <div class="carousel-droite-liste-item" id="last-item">
                     <div class="carousel-droite-icones">
                         <img src="images/icones/picto_coeur.png" alt="">
                     </div>
                     <div class="carousel-droite-liens">
                         <h3>
-                            <a href="#">Soutenir nos projets</a>
+                            <a href="/accueil/nous-soutenir">Soutenir nos projets</a>
                         </h3>
                     </div>
                 </div>

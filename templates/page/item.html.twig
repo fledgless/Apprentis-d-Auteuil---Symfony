@@ -1,0 +1,21 @@
+{% set page_show = path('page_show', { category: page.category|slug|lower, slug: page.slug }) %}
+
+<div class="item-page">
+    {% if page.miniature %}
+        <figure class="item-page-lien">
+            <a class="item-page-miniature" href="{{ page_show }}">
+                <img src="/uploads/{{ page.miniature.filename }}" alt="{{ page.miniature.altText }}" loading="lazy" width="350" height="196">
+            </a>
+            <figcaption>
+                <a href="{{ page_show }}">
+                    <h3>{{ page.title }}</h3>
+                </a>
+            </figcaption>
+        </figure>
+    {% endif %}
+    <div class="item-page-informations">    
+        <div class="item-page-description">
+            <p>{{ page.featuredText ?: page.content|striptags|slice(0, 130) ~ '...' }}</p>
+        </div>
+    </div>
+</div>

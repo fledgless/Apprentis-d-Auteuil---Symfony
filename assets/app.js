@@ -29,13 +29,17 @@ liens.forEach((liens) => {
 
 // toogle active sur carousel
 
-const buttons = document.querySelectorAll(".btn-carousel");
-const slides = document.querySelectorAll(".carousel-gauche-element");
+let prevButton = document.getElementById("prev");
+let nextButton = document.getElementById("next");
+let slidesContainer = document.querySelector(".carousel-gauche-contenu")
+let slide = document.querySelector(".carousel-gauche-element");
 
-buttons.forEach((button) => {
-    button.addEventListener('click', (e) => {
-        const calcNextSlide = e.target.id === "next" ? 1 : -1;
-        const slideActive = document.querySelector(".active");
-        
-    })
-})
+nextButton.addEventListener("click", () => {
+    const slideWidth = slide.clientWidth;
+    slidesContainer.scrollLeft += slideWidth;
+  });
+  
+  prevButton.addEventListener("click", () => {
+    const slideWidth = slide.clientWidth;
+    slidesContainer.scrollLeft -= slideWidth;
+  });

@@ -1,0 +1,27 @@
+{% extends 'base-home-article.html.twig' %}
+
+{% block body %}
+    <div class="breadcrumbs">
+        <span>
+            <a href="/">Accueil</a>
+        </span>
+         » 
+        <span>
+            <a href="/actualites">Actualités</a>
+        </span>
+         » 
+        <span class="current-page">
+            {{ article.title }}
+        </span>
+    </div>
+    <div class="s-container">
+        <article>
+            <div class="article-category">{{ article.category }}</div>
+            <h1 class="article-titre">{% block title %}{{ article.title }}{% endblock %}</h1>
+            {% if article.featuredImage %}
+                <img src="/uploads/{{ article.featuredImage.filename }}" alt="{{ article.featuredImage.altText }}" loading="lazy">
+            {% endif %}
+            <div class="article-content">{{ article.content|raw }}</div>
+        </article>
+    </div>
+{% endblock %}
