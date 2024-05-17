@@ -15,7 +15,9 @@
     </div>
     <div class="formulaire-contact">
         <h2>Addressez-nous ce formulaire</h2>
-        <form action="" id="form-contact" onsubmit="return validate();"> 
+        <div id="error_message"></div> 
+        <form action="" 
+        id="myform" onsubmit="return validateFormContact();"> 
             <div class="input_field"> 
                 <p>Votre nom (obligatoire)</p>
                 <input type="text" id="name"> 
