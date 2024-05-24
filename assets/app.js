@@ -27,7 +27,7 @@ liens.forEach((liens) => {
     })
 })
 
-// toogle active sur carousel
+// toggle active sur carrousel
 
 let prevButton = document.getElementById("prev");
 let nextButton = document.getElementById("next");
