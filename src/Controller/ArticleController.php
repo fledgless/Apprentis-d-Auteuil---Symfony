@@ -21,7 +21,5 @@ class ArticleController extends AbstractController
                 'article' => $article
             ]);
         }
-        // dd($slug, $article);
-        
     }
 }

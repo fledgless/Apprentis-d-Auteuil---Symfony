@@ -20,29 +20,13 @@ class DashboardController extends AbstractDashboardController
     #[Route('/admin', name: 'admin')]
     public function index(): Response
     {
-        // return parent::index();
         return $this->render('admin/dashboard/index.html.twig');
-        // Option 1. You can make your dashboard redirect to some common page of your backend
-        //
-        // $adminUrlGenerator = $this->container->get(AdminUrlGenerator::class);
-        // return $this->redirect($adminUrlGenerator->setController(OneOfYourCrudController::class)->generateUrl());
-
-        // Option 2. You can make your dashboard redirect to different pages depending on the user
-        //
-        // if ('jane' === $this->getUser()->getUsername()) {
-        //     return $this->redirect('...');
-        // }
-
-        // Option 3. You can render some custom template to display a proper dashboard with widgets, etc.
-        // (tip: it's easier if your template extends from @EasyAdmin/page/content.html.twig)
-        //
-        // return $this->render('some/path/my-dashboard.html.twig');
     }
 
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('CFP Sainte Barbe');
+            ->setTitle('<img src="images/apprentis-auteuil-logo.jpg" decoding="async" width="75">CFP Sainte Barbe');
     }
 
     public function configureMenuItems(): iterable
@@ -65,25 +49,24 @@ class DashboardController extends AbstractDashboardController
             ]);
         }
         
+        if ($this->isGranted('ROLE_ADMIN')) {
+            yield MenuItem::section('Pages');
+            yield MenuItem::subMenu('Pages', 'fas fa-pen-nib')->setSubItems([
+                MenuItem::linkToCrud('Toutes les pages', 'fas fa-list', Page::class),
+                MenuItem::linkToCrud('Ajout page', 'fas fa-plus', Page::class)->setAction(Crud::PAGE_NEW),
+            ]);
+            yield MenuItem::subMenu('Miniatures', 'fas fa-image')->setSubItems([
+                MenuItem::linkToCrud('Toutes les miniatures', 'fas fa-list', Miniature::class),
+                MenuItem::linkToCrud('Ajouter', 'fas fa-plus', Miniature::class)->setAction(Crud::PAGE_NEW),
+            ]);
+        }
 
-            if ($this->isGranted('ROLE_ADMIN')) {
-                yield MenuItem::section('Pages');
-                yield MenuItem::subMenu('Pages', 'fas fa-pen-nib')->setSubItems([
-                    MenuItem::linkToCrud('Toutes les pages', 'fas fa-list', Page::class),
-                    MenuItem::linkToCrud('Ajout page', 'fas fa-plus', Page::class)->setAction(Crud::PAGE_NEW),
-                ]);
-                yield MenuItem::subMenu('Miniatures', 'fas fa-image')->setSubItems([
-                    MenuItem::linkToCrud('Toutes les miniatures', 'fas fa-list', Miniature::class),
-                    MenuItem::linkToCrud('Ajouter', 'fas fa-plus', Miniature::class)->setAction(Crud::PAGE_NEW),
-                ]);
-            }
-
-            if ($this->isGranted('ROLE_ADMIN')) {
-                yield MenuItem::section('Users');
-                yield MenuItem::subMenu('Users', 'fas fa-user')->setSubItems([
-                    MenuItem::linkToCrud('Tous les users', 'fas fa-list', User::class),
-                    MenuItem::linkToCrud('Ajouter', 'fas fa-plus', User::class)->setAction(Crud::PAGE_NEW),
-                ]);
-            };
+        if ($this->isGranted('ROLE_ADMIN')) {
+            yield MenuItem::section('Users');
+            yield MenuItem::subMenu('Users', 'fas fa-user')->setSubItems([
+                MenuItem::linkToCrud('Tous les users', 'fas fa-list', User::class),
+                MenuItem::linkToCrud('Ajouter', 'fas fa-plus', User::class)->setAction(Crud::PAGE_NEW),
+            ]);
+        };
     }
 }

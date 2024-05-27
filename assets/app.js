@@ -19,7 +19,7 @@ hamburger.addEventListener("click", () => {
     nav.classList.toggle("open");
 })
 
-// toggle nav sur liens
+// remove nav sur liens
 let liens = document.querySelectorAll(".menu-principal-item");
 liens.forEach((liens) => {
     liens.addEventListener("click", () => {
@@ -27,22 +27,22 @@ liens.forEach((liens) => {
     })
 })
 
-// toggle active sur carrousel
+// carrousel
 
 let prevButton = document.getElementById("prev");
 let nextButton = document.getElementById("next");
-let slidesContainer = document.querySelector(".carousel-gauche-contenu")
+let slidesContainer = document.querySelector(".carousel-gauche-contenu");
 let slide = document.querySelector(".carousel-gauche-element");
 
 nextButton.addEventListener("click", () => {
     const slideWidth = slide.clientWidth;
     slidesContainer.scrollLeft += slideWidth;
-  });
+});
   
-  prevButton.addEventListener("click", () => {
+prevButton.addEventListener("click", () => {
     const slideWidth = slide.clientWidth;
     slidesContainer.scrollLeft -= slideWidth;
-  });
+});
 
 // fonction pour vérifier le formulaire de contact
 /**
