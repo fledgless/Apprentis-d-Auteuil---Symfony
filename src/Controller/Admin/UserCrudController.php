@@ -39,6 +39,9 @@ class UserCrudController extends AbstractCrudController
             ]);
     }
 
+    /** 
+     * @return 
+     */
     public function persistEntity(EntityManagerInterface $entityManager, $entityInstance): void
     {
         //** @var User $user */

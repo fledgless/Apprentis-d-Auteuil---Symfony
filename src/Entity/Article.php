@@ -33,7 +33,7 @@ class Article implements TimeStampInterface
     #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $updatedAt = null;
 
-    #[ORM\ManyToOne]
+    #[ORM\OneToOne]
     private ?Media $featuredImage = null;
 
     #[ORM\Column(length: 255)]
