@@ -9,15 +9,15 @@ class ArticleTest extends TestCase
 {
     public function testPageEntity()
     {
-        $page = new Article();
-        $page->setTitle('Article test');
-        $page->setSlug('article-test');
-        $page->setContent("Ceci est un test pour l'entité article.");
-        $page->setCategory('Test');
+        $article = new Article();
+        $article->setTitle('Article test');
+        $article->setSlug('article-test');
+        $article->setContent("Ceci est un test pour l'entité article.");
+        $article->setCategory('Test');
 
-        $this->assertSame('Article test', $page->getTitle());
-        $this->assertSame('article-test', $page->getSlug());
-        $this->assertSame("Ceci est un test pour l'entité article.", $page->getContent());
-        $this->assertSame('Test', $page->getCategory());
+        $this->assertSame('Article test', $article->getTitle());
+        $this->assertSame('article-test', $article->getSlug());
+        $this->assertSame("Ceci est un test pour l'entité article.", $article->getContent());
+        $this->assertSame('Test', $article->getCategory());
     }
 }
