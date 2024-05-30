@@ -30,3 +30,5 @@ jobs:
           APP_ENV: prod
         run: |
           ssh -i $SSH_PRIVATE_KEY user@your_server 'cd /path/to/project && git pull origin main && composer install --no-dev --optimize-autoloader && php bin/console doctrine:migrations:migrate && npm install && npm run build && sudo chown -R www-data:www-data var/cache var/log'
+
+
